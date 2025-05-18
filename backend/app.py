@@ -24,5 +24,10 @@ def run_code():
     except Exception as e:
         return jsonify({"error": str(e)})
 
+# ✅ Health check route for Render
+@app.route("/healthz")
+def health_check():
+    return "OK", 200
+
 if __name__ == "__main__":
     app.run(debug=True)
