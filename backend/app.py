@@ -4,6 +4,9 @@ import subprocess
 
 app = Flask(__name__)
 CORS(app)
+@app.route('/', methods=['GET'])
+def home():
+    return "Welcome to the Online Code Editor API. Use POST /run to execute code."
 
 @app.route('/run', methods=['POST'])
 def run_code():
