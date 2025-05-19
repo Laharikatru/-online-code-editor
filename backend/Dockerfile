@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 # Copy requirements and install
-COPY requirements.txt /app/
+COPY backend/requirements.txt /app/
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
